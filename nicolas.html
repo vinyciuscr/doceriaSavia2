@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina 1 - Ana</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;500;600;700&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Lexend Deca' , sans-serif;
+    overflow-y: hidden;
+    background-color: rgb(241, 236, 225);
+}
+.wallpaper { 
+    grid-area: wallpaper; 
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .wallpaper img {
+    width: 100%;
+    height: 120%;
+    margin: 0;
+  }
+.container {  display: grid;
+    grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "wallpaper wallpaper conteudo conteudo conteudo conteudo"
+      "wallpaper wallpaper conteudo conteudo conteudo conteudo"
+      "wallpaper wallpaper conteudo conteudo conteudo conteudo"
+      "wallpaper wallpaper conteudo conteudo conteudo conteudo";
+  }
+  
+  .wallpaper { grid-area: wallpaper; }
+  
+  .conteudo { grid-area: conteudo; }
+
+  .title{
+    color: rgb(70, 70, 70);
+    margin-left: 3%;
+    margin-top: 4%;
+    font-size: 220%;
+    box-shadow: 0px 2px 0px black;
+  }
+  .cabecalho{
+    display: inline-flex;
+  }
+  .cabecalho img {
+    height: 10%;
+    width: 10%;
+    margin-top: 1.6%;
+    margin-left: 20%;
+    border-radius: 300px;
+  }
+  .conteudo h2 {
+    color: black;
+    margin-left: 3%;
+    margin-bottom: 1%;
+    font-size: 110%;
+  }
+  .conteudo p{
+    text-align: justify;
+    margin-left: 3%;
+    margin-top: 1%;
+    margin-right: 2%;
+  }
+  #title_dadoscadastraias{
+    color: darkred;
+    margin-left: 3%;
+    margin-top: 3%;
+    font-size: 190%;
+  }
+  #menu-retratil{
+    overflow-y: scroll;
+}
+#check{
+    display: none;
+}
+#icone{
+    cursor: pointer;
+    padding: 15px;
+    position: absolute;
+    z-index: 1;
+}
+#icone img{
+    width: 7%;
+    height: 5%;
+}
+.barra{
+    background-color: rgb(250, 131, 151);
+    height: 100%;
+    width: 300px;
+    position: absolute;
+    transition: all 0.2s linear;
+    left: -300px;
+    border-radius: 5px;
+    font-style: italic;
+}
+#nav{
+    width: 100%;
+    position: absolute;
+    top: 60px;
+}
+#nav a{
+    text-decoration: none;
+}
+.link{
+    background-color: rgb(240, 90, 115);
+    padding: 20px;
+    font-family:'Merriweather', serif;
+    font-size: 12pt;
+    transition: all 0.2s linear;
+    color: black;
+    border-bottom: 2px solid gray;
+    opacity: 0;
+    margin-top: 200px;
+    font-weight: 400;
+}
+.link:hover{
+    background-color: rgb(209, 156, 209);
+}
+#check:checked ~ .barra{
+    transform: translateX(300px);
+}
+#check:checked ~ .barra #nav a .link{
+    opacity: 1;
+    margin-top: 0;
+    transition-delay: 0.2s;
+}
+    </style>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="style4.css">
+    <section id="menu-retratil">
+        <input type="checkbox" id="check">
+        <label id="icone" for="check"><img src="icone.png"></label>
+        <div class="barra">
+            <div id="nav">
+                <a href="index.html"><div class="link">Login</div></a>
+                <a href="nicolas.html"><div class="link">Dados Cadastrados</div></a>
+                <a href="nicolas2.html"><div class="link">Doces Favoritos</div></a>
+            </div>
+        </div>
+    </section>
+</head>
+<body>
+    <div class="container">
+        <div class="wallpaper">
+            <img src="wallpaper-entrada.jpg" alt="">
+        </div>
+        <div class="conteudo">
+            <div class="cabecalho">
+            <h1 class="title">Seja Bem Vinde - Nicolas </h1>
+            <img src="logo.png" alt="">
+            </div>
+            <h2 id="title_dadoscadastraias">Dados Cadastrais</h2>
+            <h2>Nome</h2>
+            <p>Ana Vitória</p>
+            <h2>CPF</h2>
+            <p>XXXXXXXXX</p>
+            <h2>Data de Nascimento</h2>
+            <p>06/09/2005</p>
+            <h2>Endereço</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ullamcorper quam vitae purus vestibulum aliquam. Proin ex orci, imperdiet eget gravida in, rutrum at libero. Nam non felis nisl. </p>
+            <h2>Telefone</h2>
+            <p>(31)99999999</p>
+            <h2>Email</h2>
+            <p>manosemanas@gmail.com</p>
+        </div>
+      </div>
+</body>
+</html>

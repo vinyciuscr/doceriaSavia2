@@ -1,0 +1,124 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina 2 - Ana</title>
+    <link rel="stylesheet" href="style3.css">
+    <link rel="stylesheet" href="style4.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;500;600;700&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Lexend Deca' , sans-serif;
+    background-color: rgb(241, 236, 225);
+}
+.cabecalho{
+    display: inline-flex;
+    margin-top: 1%;
+}
+.cabecalho img{
+    margin-left: 110%;
+    height: 15%;
+    width: 15%;
+    border-radius: 400px;
+}
+.cabecalho h1{
+    margin-left: 3%;
+    text-align: left;
+}
+.imagens{
+    gap: 10px;
+}
+.imagens img{
+    height: 450px;
+    width: 300px;
+    box-shadow: 4px 4px 0px black;
+}
+#imagem1{
+    margin-left: 22%;
+}#menu-retratil{
+    overflow-y: scroll;
+}
+#check{
+    display: none;
+}
+#icone{
+    cursor: pointer;
+    padding: 15px;
+    position: absolute;
+    z-index: 1;
+}
+#icone img{
+    width: 7%;
+    height: 5%;
+}
+.barra{
+    background-color: rgb(250, 131, 151);
+    height: 100%;
+    width: 300px;
+    position: absolute;
+    transition: all 0.2s linear;
+    left: -300px;
+    border-radius: 5px;
+    font-style: italic;
+}
+#nav{
+    width: 100%;
+    position: absolute;
+    top: 60px;
+}
+#nav a{
+    text-decoration: none;
+}
+.link{
+    background-color: rgb(240, 90, 115);
+    padding: 20px;
+    font-family:'Merriweather', serif;
+    font-size: 12pt;
+    transition: all 0.2s linear;
+    color: black;
+    border-bottom: 2px solid gray;
+    opacity: 0;
+    margin-top: 200px;
+    font-weight: 400;
+}
+.link:hover{
+    background-color: rgb(209, 156, 209);
+}
+#check:checked ~ .barra{
+    transform: translateX(300px);
+}
+#check:checked ~ .barra #nav a .link{
+    opacity: 1;
+    margin-top: 0;
+    transition-delay: 0.2s;
+}
+    </style>
+</head>
+<body>
+
+    <section id="menu-retratil">
+        <input type="checkbox" id="check">
+        <label id="icone" for="check"><img src="icone.png"></label>
+        <div class="barra">
+            <div id="nav">
+                <a href="index.html"><div class="link">Login</div></a>
+                <a href="nicolas.html"><div class="link">Dados Cadastrados</div></a>
+                <a href="nicolas2.html"><div class="link">Doces Favoritos</div></a>
+            </div>
+        </div>
+    </section>
+    <div class="cabecalho">
+        <h1 class="title">Doces Favoritos Nicolas </h1>
+        <img src="logo.png" alt="">
+        </div>
+    <div class="imagens">
+        <img id="imagem1"src="docefavorito.jpg" alt="">
+        <img src="docefavorito.jpg" alt="">
+        <img src="docefavorito.jpg" alt="">
+    </div>
+</body>
+</html>
